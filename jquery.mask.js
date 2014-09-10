@@ -405,9 +405,9 @@
     };
 
     // looking for inputs with data-mask attribute
-    $('input[data-mask]').each(HTMLAttributes);
+    // $('input[data-mask]').each(HTMLAttributes);
 
     // dynamically added elements with data-mask html notation.
-    $(document).on(live, '*[data-mask]', HTMLAttributes);
+    // $(document).on(live, '*[data-mask]', HTMLAttributes);
 
 }));
