@@ -152,7 +152,7 @@
                 return new RegExp(r);
             },
             destroyEvents: function() {
-                el.off(['keydown', 'keyup', 'paste', 'drop', 'change', 'blur', 'focusout', 'DOMNodeInserted', ''].join('.mask '))
+                el.off(['keydown', 'keyup', 'paste', 'drop', 'change', 'blur', 'focusout', ''].join('.mask '))
                 .removeData("changeCalled");
             },
             val: function(v) {
@@ -351,7 +351,6 @@
     };
 
     var watchers = {},
-        live = 'DOMNodeInserted.mask',
         HTMLAttributes = function () {
             var input = $(this),
                 options = {},
@@ -387,7 +386,7 @@
             // dynamically added elements.
             watchers[selector] = true;
             setTimeout(function(){
-                $(document).on(live, selector, maskFunction);
+                $(document).on(selector, maskFunction);
             }, 500);
         }
     };
